@@ -117,7 +117,7 @@ function initialize() {
     }
   };
 
-  
+
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var styledMapOptions = {
@@ -129,7 +129,7 @@ function initialize() {
 
   map.mapTypes.set('usroadatlas', usRoadMapType);
   map.setMapTypeId('usroadatlas');
-  
+
 
 	/*var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
@@ -154,7 +154,7 @@ function initialize() {
 	var infowindow = new google.maps.InfoWindow({
 		content: contentString
 	});*/
-  
+
 	map.data.loadGeoJson('js/haircutery.json');
 	// selects the feature
 	map.data.addListener('click', function(event) {
@@ -163,9 +163,14 @@ function initialize() {
 	});
 	// is set to true.
 	map.data.setStyle(function(feature) {
-		var iconForFeature = 'images/marker.png';
+
+    var icon1 = 'http://citytrack.me/Romer/images/marker-red.png';
+    var icon2 = 'https://maps.google.com/mapfiles/kml/shapes/schools_maps.png';
+    var icon3 = 'http://citytrack.me/Romer/images/marker.png'
+
+		var iconForFeature = icon3;
 		if (feature.getProperty('isColorful')) {
-			iconForFeature = 'images/marker-red.png';
+			iconForFeature = icon2;
 		}
 		return {icon:iconForFeature};
 	});
