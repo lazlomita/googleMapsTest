@@ -1,0 +1,21 @@
+#map-canvas {
+    width: 500px;
+    height: 400px;
+    background-color: #CCC;
+}
+
+#legend {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #000;
+}
+#legend h3 {
+  margin-top: 0;
+}
+#legend img {
+  vertical-align: middle;
+  width:20px;
+  height:20px;
+}
